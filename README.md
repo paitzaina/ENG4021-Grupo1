@@ -1,2 +1,3 @@
 # ENG4021---Paula-Itzaina
-ex uso GitHub
+Repositório Paula Itzaina
+GRUPO 1
