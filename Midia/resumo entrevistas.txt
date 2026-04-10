@@ -1,0 +1,26 @@
+Projeto Integrado- Software
+Tema: saúde
+
+PROBLEMA: o aumento de transtornos mentais nos últimos anos
+
+
+Idade: a maioria das pessoas (66,7%) que responderam a entrevista tinham entre 18 e 35 anos
+	Pesquisas: a faixa etária de pessoas com mais transtornos mentais são jovens entre 5 e 24 anos.
+
+Possuem/acreditam possuir transtornos mentais: cerca de 37% afirmaram que sim, sendo que 3,7% preferiu não responder
+	Pesquisas: cerca de 52% da população possui transtornos mentais.
+
+Transtorno principal: com a entrevista foi possível perceber que a maioria das pessoas tem ansiedade/crise de pânico 
+	Pesquisas: ansiedade é o transtorno mais comum na sociedade, afetando cerca de 10% da população.
+
+Diagnóstico/identificação do caso: as pessoas que possuem algum tipo de transtorno relataram que a maioria dos diagnósticos foram por meio de profissionais de saúde (psicólogo/psiquiatra). Porém também ocorreram relatos de pessoas que fizeram apenas pesquisas online e acabaram se comparando com pessoas que já possuíam o transtorno
+
+Tempo para o diagnóstico: a maioria dos casos demorou alguns meses para ocorrer, chegando a ter caso com 1 ano de demora.
+	Pesquisas: um diagnóstico completo leva alguns meses ou até anos para se concretizar.
+
+Idade do diagnóstico: a maioria dos relatos foram de entre 14 e 25 anos.
+
+Tratamento: cerca de 63% das pessoas realizam algum tipo de tratamento sobre, sendo eles: 
+	majoritariamente, terapia psicológica (50%), uso de medicamentos (40%) e acompanhamento psiquiátrico (20%).
+
+	OBS: 25% das pessoas que confirmaram usar medicamento, relataram que fazem SEM prescrição médica.
