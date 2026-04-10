@@ -1,0 +1,19 @@
+Melhores ideias do brainstorm
+
+Diário emocional inteligente
+ 	Permite que o usuário registre seus sentimentos diariamente. O diferencial é que o sistema analisa esses registros ao longo do tempo, ajudando a identificar padrões emocionais e entender melhor o próprio comportamento.
+
+Monitor de gatilhos emocionais
+ 	O aplicativo identifica situações que causam estresse, ansiedade ou tristeza (ex: falta de sono, excesso de redes sociais). Isso ajuda o usuário a reconhecer o que afeta sua saúde mental e agir antes que piore.
+
+Modo crise com suporte imediato
+ 	Uma função de emergência onde o usuário pode acessar rapidamente ajuda, como exercícios de respiração, mensagens de apoio ou contatos importantes. Serve para momentos de ansiedade intensa ou crise emocional.
+
+Controle de redes sociais
+ 	Ajuda o usuário a monitorar e limitar o tempo gasto em redes sociais, evitando comparação excessiva e desgaste mental.
+
+Recomendações personalizadas
+ 	Com base no comportamento do usuário, o app sugere hábitos, pausas, exercícios ou atividades que ajudam a melhorar o bem-estar.
+
+Exercícios de respiração e meditação guiada
+ 	Ferramentas simples e rápidas para ajudar o usuário a relaxar, reduzir ansiedade e melhorar o foco no dia a dia.
