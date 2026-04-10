@@ -1,0 +1,16 @@
+O principal diferencial do nosso site é o foco no apoio imediato ao usuário, especialmente em momentos de vulnerabilidade emocional. Diferente de outras plataformas,
+que muitas vezes se limitam a conteúdos informativos, buscamos oferecer uma experiência completa, prática e acolhedora, que acompanhe o usuário tanto no dia a dia 
+quanto em situações mais difíceis.
+O site será estruturado em cinco áreas, cada uma pensada para diferentes necessidades emocionais:
+  -A área de Diário permite que o usuário registre seus sentimentos e identifique padrões e gatilhos ao longo do tempo, contribuindo para o autoconhecimento e o 
+controle das crises. 
+  -Já a área de Exercícios oferece práticas que podem ser realizadas diariamente, ajudando no desenvolvimento gradual do controle emocional e nabusca por mais 
+equilíbrio.
+  -A área de Dicas tem um caráter mais imediato, com recursos como truques rápidos, áudios relaxantes e mensagens motivacionais, auxiliando o usuário a lidar com 
+momentos de ansiedade antes que se intensifiquem. 
+  -A seção de Notícias é voltada para a conscientização, trazendo conteúdos atuais sobre saúde mental e promovendo identificação e informação.
+  -Por fim, a área de Crise, que é o principal destaque do site, foi desenvolvida para oferecer suporte direto em momentos críticos, com exercícios guiados,
+ambientação sonora relaxante e acesso facilitado a contatos de ajuda.
+
+Dessa forma, nosso site se diferencia por integrar acolhimento, praticidade e suporte imediato, não apenas informando, mas também atuando diretamente no bem-estar
+do usuário. 
