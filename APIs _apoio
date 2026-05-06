@@ -1,0 +1,24 @@
+Usaremos 3 categorias:
+-IA conversacional (chatbot de apoio)
+API do Google AI Studio (Gemini)
+Boa para:chatbot emocional;diário inteligente;respostas empáticas e análise de sentimentos.
+Possui plano gratuito relativamente generoso e muita gente usa em apps de saúde mental.
+
+-Monitoramento emocional/humor
+API da ParallelDots
+Boa para:detectar emoções;análise psicológica de texto;classificação emocional.
+
+-Meditação e bem-estar
+API da ZenQuotes
+Fornece:frases motivacionais;mensagens positivas e reflexões diárias.
+Muito simples de integrar.
+
+
+Funcionalidade	                   API
+Chatbot emocional                	Gemini 
+Diário emocional inteligente	    OpenAI 
+Rastreador de humor               Firebase
+Meditação guiada	                Calm Radio
+Frases motivacionais	            ZenQuotes
+Alertas e emergência	            Twilio
+Detecção de emoções	              ParallelDots
