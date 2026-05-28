@@ -1,0 +1,45 @@
+{% extends 'core/base.html' %}
+{% load static %}
+
+{% block title %}MindApp — Início{% endblock %}
+
+{% block content %}
+<div class="screen-content">
+
+  <div class="home-header">
+    <div class="home-logo">
+      <svg viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="15" cy="11" r="7" fill="white" opacity="0.9"/>
+        <path d="M9 18 Q9 26 15 26 Q21 26 21 18" stroke="white" stroke-width="2" fill="none" stroke-linecap="round"/>
+        <circle cx="12" cy="10" r="1.5" fill="#5ba4cf"/>
+        <circle cx="18" cy="10" r="1.5" fill="#5ba4cf"/>
+        <path d="M12 14 Q15 16.5 18 14" stroke="#5ba4cf" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+      </svg>
+    </div>
+    <div class="home-appname">MindApp</div>
+    <div class="home-tagline">Acalme sua mente a qualquer momento, da onde estiver.</div>
+  </div>
+
+  <div class="home-grid">
+    <a href="{% url 'diario' %}" class="home-card">
+      <span class="card-icon">📔</span>
+      <span class="card-label">Diário</span>
+    </a>
+    <a href="{% url 'dicas' %}" class="home-card">
+      <span class="card-icon">💡</span>
+      <span class="card-label">Dicas</span>
+    </a>
+    <a href="{% url 'exercicios' %}" class="home-card">
+      <span class="card-icon">🧘</span>
+      <span class="card-label">Exercícios</span>
+    </a>
+    <a href="{% url 'noticias' %}" class="home-card">
+      <span class="card-icon">📰</span>
+      <span class="card-label">Notícias</span>
+    </a>
+  </div>
+
+  <a href="{% url 'crise' %}" class="crise-btn">🆘 &nbsp; CRISE</a>
+
+</div>
+{% endblock %}

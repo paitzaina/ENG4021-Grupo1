@@ -1,0 +1,35 @@
+{% extends 'core/base.html' %}
+
+{% block title %}MindApp — Exercícios{% endblock %}
+
+{% block content %}
+<div class="topbar">
+  <a href="{% url 'home' %}" class="back">‹</a>
+  <span class="topbar-title">Exercícios</span>
+</div>
+
+<div class="screen-content">
+  <div class="ex-layout">
+
+    <div class="ex-list">
+      <button class="ex-btn active">
+        <span class="ex-icon">🌬️</span> Respiração
+      </button>
+      <button class="ex-btn">
+        <span class="ex-icon">🌿</span> Relaxamento
+      </button>
+      <button class="ex-btn">
+        <span class="ex-icon">🧘</span> Meditação
+      </button>
+    </div>
+
+    <div class="ex-area">
+      <div class="ex-circle">🌬️</div>
+      <div class="ex-title">Respiração 4-7-8</div>
+      <div class="ex-desc">Inspire por 4s, segure por 7s, expire por 8s. Reduz a ansiedade rapidamente.</div>
+      <button class="ex-start">Iniciar</button>
+    </div>
+
+  </div>
+</div>
+{% endblock %}
