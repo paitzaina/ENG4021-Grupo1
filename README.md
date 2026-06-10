@@ -42,6 +42,15 @@ Bruno Moreno · Gabriela Riva · Letícia Torquato · Lucas Lourenzzo · Paula I
 O **Mindly** é um site de apoio à saúde mental voltado para jovens universitários.
 O objetivo é oferecer suporte acessível para quem enfrenta ansiedade, estresse e depressão no dia a dia acadêmico.
 
+<p align="center">
+  <img src="Midia/tela-inicial.png" width="150"/>
+  <img src="Midia/tela-diario.png" width="150"/>
+  <img src="Midia/tela-dicas.png" width="150"/>
+  <img src="Midia/tela-exercicios.png" width="150"/>
+  <img src="Midia/tela-noticias.png" width="150"/>
+  <img src="Midia/tela-crise.png" width="150"/>
+</p>
+
 O site é organizado em cinco áreas:
 
 - **Diário** — registro emocional por data, para identificar padrões e gatilhos
@@ -93,7 +102,7 @@ O site é organizado em cinco áreas:
 
 ### Templates HTML
 
-- [home.html](Codigo/core/templates/core/home.html) 
+- [home.html](Codigo/core/templates/core/home.html)
 - [diario.html](Codigo/core/templates/core/diario.html)
 - [exercicios.html](Codigo/core/templates/core/exercicios.html)
 - [dicas.html](Codigo/core/templates/core/dicas.html)
