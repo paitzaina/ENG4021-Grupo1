@@ -50,7 +50,7 @@ O site é organizado em cinco áreas:
 - **Notícias** — feed de artigos sobre saúde mental
 - **Crise** — suporte imediato: mensagem motivadora, exercício guiado, contato do CVV (188)
 
-- [home.html — tela inicial](Codigo/core/templates/core/home.html) _(o código ainda exibe o nome "MindApp" já que o nome não havia sido definido na época do desenvolvimento. O nome oficial do projeto é Mindly, atualização pendente)_
+- [home.html — tela inicial](Codigo/core/templates/core/home.html) _(o código ainda exibe o nome "MindApp" pois o nome não havia sido definido na época do desenvolvimento — o nome oficial do projeto é Mindly, atualização pendente)_
 
 ---
 
@@ -68,6 +68,7 @@ O site é organizado em cinco áreas:
 - [Definição da identidade visual](Documentos/Defini%C3%A7%C3%A3o%20da%20identidade%20visual)
 - [Fluxograma de telas](Documentos/fluxograma)
 - [Diferencial do projeto](Midia/diferencial%20do%20projeto.txt)
+- [Origem e significado do nome Mindly](https://github.com/leticiatorquato24/ENG4021-Grupo1/blob/main/Midia/Mindly.txt) _(aguardando merge)_
 - Telas no Figma — _a commitar_
 
 ---
@@ -78,6 +79,8 @@ O site é organizado em cinco áreas:
 - [Implementações diferenciais em relação aos concorrentes](Documentos/definirImplementacoes.txt)
 - [Impactos sociais negativos da aplicação](Documentos/Impactos%20Sociais%20Negativos%20da%20Aplicacao)
 - [Possibilidades de crescimento e ampliação](Documentos/Possibilidades%20de%20Crescimento%20e%20Ampliacao%20da%20Aplicacao)
+- [Estratégia para atrair usuários](https://github.com/brunomlima9/ENG4021-Grupo1/blob/main/estrategia_atrair_usuarios) _(aguardando merge)_
+- [Implementação da estratégia de atração de usuários](https://github.com/brunomlima9/ENG4021-Grupo1/blob/main/implementar_estrategia_atrair_usuarios) _(aguardando merge)_
 
 ---
 
@@ -106,6 +109,9 @@ O site é organizado em cinco áreas:
 - [models — Notícia](https://github.com/gabiriva/ENG4021-Grupo1/blob/main/models%20noticia) _(aguardando merge)_
 - [models — Dica](https://github.com/gabiriva/ENG4021-Grupo1/blob/main/models%20dica) _(aguardando merge)_
 - [models — Exercício](https://github.com/gabiriva/ENG4021-Grupo1/blob/main/models%20exercicio) _(aguardando merge)_
+- [models — Usuário](https://github.com/leticiatorquato24/ENG4021-Grupo1/blob/main/Codigo/models.py) _(aguardando merge)_
+- [models — Diário](https://github.com/leticiatorquato24/ENG4021-Grupo1/blob/main/Codigo/diario.py) _(aguardando merge)_
+- [models — Crise](https://github.com/leticiatorquato24/ENG4021-Grupo1/blob/main/Codigo/crise.py) _(aguardando merge)_
 
 ### Dependências e configuração
 
