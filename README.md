@@ -50,7 +50,7 @@ O site é organizado em cinco áreas:
 - **Notícias** — feed de artigos sobre saúde mental
 - **Crise** — suporte imediato: mensagem motivadora, exercício guiado, contato do CVV (188)
 
-- [home.html — tela inicial](Codigo/core/templates/core/home.html) _(o código ainda exibe o nome "MindApp" pois o nome não havia sido definido na época do desenvolvimento — o nome oficial do projeto é Mindly, atualização pendente)_
+- [home.html — tela inicial](Codigo/core/templates/core/home.html)
 
 ---
 
@@ -93,7 +93,7 @@ O site é organizado em cinco áreas:
 
 ### Templates HTML
 
-- [home.html](Codigo/core/templates/core/home.html) _(exibe "MindApp" — pendente atualização para "Mindly")_
+- [home.html](Codigo/core/templates/core/home.html) 
 - [diario.html](Codigo/core/templates/core/diario.html)
 - [exercicios.html](Codigo/core/templates/core/exercicios.html)
 - [dicas.html](Codigo/core/templates/core/dicas.html)
