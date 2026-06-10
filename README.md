@@ -76,7 +76,7 @@ O site é organizado em cinco áreas:
 
 - [Definição da identidade visual](Documentos/Defini%C3%A7%C3%A3o%20da%20identidade%20visual)
 - [Fluxograma de telas](Documentos/fluxograma)
-- [Diferencial do projeto](Midia/diferencial%20do%20projeto.txt)
+- [Diferencial do projeto](Documentos/diferencial)
 - [Origem e significado do nome Mindly](https://github.com/leticiatorquato24/ENG4021-Grupo1/blob/main/Midia/Mindly.txt) _(aguardando merge)_
 
 ---
