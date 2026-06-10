@@ -78,7 +78,6 @@ O site é organizado em cinco áreas:
 - [Fluxograma de telas](Documentos/fluxograma)
 - [Diferencial do projeto](Midia/diferencial%20do%20projeto.txt)
 - [Origem e significado do nome Mindly](https://github.com/leticiatorquato24/ENG4021-Grupo1/blob/main/Midia/Mindly.txt) _(aguardando merge)_
-- Telas no Figma — _a commitar_
 
 ---
 
