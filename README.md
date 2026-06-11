@@ -77,7 +77,7 @@ O site é organizado em cinco áreas:
 - [Definição da identidade visual](Documentos/Defini%C3%A7%C3%A3o%20da%20identidade%20visual)
 - [Fluxograma de telas](Documentos/fluxograma)
 - [Diferencial do projeto](Documentos/diferencial)
-- [Origem e significado do nome Mindly](https://github.com/leticiatorquato24/ENG4021-Grupo1/blob/main/Midia/Mindly.txt) _(aguardando merge)_
+- [Origem e significado do nome Mindly](https://github.com/paitzaina/ENG4021-Grupo1/blob/main/Documentos/mindly.txt)
 
 ---
 
@@ -117,9 +117,9 @@ O site é organizado em cinco áreas:
 - [models — Notícia](https://github.com/gabiriva/ENG4021-Grupo1/blob/main/models%20noticia) _(aguardando merge)_
 - [models — Dica](https://github.com/gabiriva/ENG4021-Grupo1/blob/main/models%20dica) _(aguardando merge)_
 - [models — Exercício](https://github.com/gabiriva/ENG4021-Grupo1/blob/main/models%20exercicio) _(aguardando merge)_
-- [models — Usuário](https://github.com/leticiatorquato24/ENG4021-Grupo1/blob/main/Codigo/models.py) _(aguardando merge)_
-- [models — Diário](https://github.com/leticiatorquato24/ENG4021-Grupo1/blob/main/Codigo/diario.py) _(aguardando merge)_
-- [models — Crise](https://github.com/leticiatorquato24/ENG4021-Grupo1/blob/main/Codigo/crise.py) _(aguardando merge)_
+- [models — Usuário](https://github.com/paitzaina/ENG4021-Grupo1/blob/main/Codigo/usuarios.py) 
+- [models — Diário](https://github.com/paitzaina/ENG4021-Grupo1/blob/main/Codigo/diario.py) 
+- [models — Crise](https://github.com/paitzaina/ENG4021-Grupo1/blob/main/Codigo/crise.py) 
 
 ### Dependências e configuração
 
