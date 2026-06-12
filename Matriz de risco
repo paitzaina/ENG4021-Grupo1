@@ -1,0 +1,20 @@
+🧠 Tabela de Riscos
+Risco	                                    Probabilidade	             Impacto	               Nível de Risco	                Ação Preventiva
+Usuário não se sentir acolhido	              Média                  	Alto	                   Alto	                Melhorar linguagem, interface simples 
+                                                                                                                     e conteúdo humanizado
+Informações incorretas ou 
+mal interpretadas	                            Baixa                	Muito Alto	               Crítico              Revisão de conteúdo e uso de fontes confiáveis
+Falhas técnicas na área de crise	            Baixa	                Muito Alto	               Crítico	            Testes constantes e manutenção do sistema
+Baixo engajamento dos usuários	              Média	                Médio	                     Médio	               Melhorar usabilidade e personalização
+Vazamento de dados (diário do usuário)	      Baixa	                Muito Alto	               Crítico	            Implementar segurança e proteção de dados
+Usuário não entender como usar o site	        Média	               Médio	                    Médio	                Interface intuitiva e instruções claras
+Dependência excessiva do site 
+sem ajuda profissional	                    Baixa	                  Alto	                    Alto	                Incentivar busca por ajuda profissional
+
+
+A matriz de risco permite identificar os principais problemas que podem ocorrer durante o uso do site, 
+analisando tanto a probabilidade quanto o impacto de cada situação. No caso deste projeto, os riscos mais críticos estão relacionados 
+à segurança dos dados, falhas técnicas em momentos de crise e à confiabilidade das informações oferecidas.
+
+A partir dessa análise, é possível desenvolver estratégias para reduzir esses riscos, garantindo uma experiência mais segura,
+eficiente e acolhedora para o usuário.

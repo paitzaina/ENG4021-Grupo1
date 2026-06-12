@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listar Usuários</title>
+
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 40px 20px;
+        }
+
+        h2 {
+            color: #3a7bd5;
+            margin-bottom: 20px;
+        }
+
+        .container {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            width: 600px;
+            max-width: 100%;
+            box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-size: 14px;
+            box-sizing: border-box;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th {
+            background-color: #3a7bd5;
+            color: white;
+            padding: 10px;
+            text-align: left;
+        }
+
+        td {
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+            font-size: 14px;
+        }
+
+        tr:hover {
+            background-color: #f0f5ff;
+        }
+
+        .status-ativo   { color: green; font-weight: bold; }
+        .status-inativo { color: #999; }
+
+        .humor-bem    { color: #2e7d32; font-weight: bold; }
+        .humor-neutro { color: #f57c00; font-weight: bold; }
+        .humor-mal    { color: #c62828; font-weight: bold; }
+
+        .total {
+            margin-top: 16px;
+            font-size: 13px;
+            color: #666;
+            text-align: right;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>Lista de Usuários</h2>
+
+        <input type="text" id="busca" placeholder="Buscar por nome ou e-mail..." oninput="filtrar()">
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>E-mail</th>
+                    <th>Humor</th>
+                    <th>Status</th>
+                    <th>Cadastro</th>
+                </tr>
+            </thead>
+            <tbody id="tabela">
+            </tbody>
+        </table>
+
+        <p class="total" id="total"></p>
+    </div>
+
+    <script>
+        const usuarios = [
+            { nome: "Ana Lima",       email: "ana@email.com",    humor: "Bem",    status: "Ativo",   cadastro: "12/04/2025" },
+            { nome: "Bruno Souza",    email: "bruno@email.com",  humor: "Neutro", status: "Ativo",   cadastro: "03/03/2025" },
+            { nome: "Carla Menezes",  email: "carla@email.com",  humor: "Mal",    status: "Ativo",   cadastro: "21/01/2025" },
+            { nome: "Diego Ferreira", email: "diego@email.com",  humor: "Bem",    status: "Inativo", cadastro: "08/05/2025" },
+            { nome: "Eduarda Costa",  email: "edu@email.com",    humor: "Neutro", status: "Ativo",   cadastro: "17/02/2025" },
+            { nome: "Felipe Ramos",   email: "felipe@email.com", humor: "Bem",    status: "Ativo",   cadastro: "29/04/2025" }
+        ];
+
+        function renderizar(lista) {
+            const tabela = document.getElementById("tabela");
+            const total  = document.getElementById("total");
+
+            tabela.innerHTML = "";
+
+            if (lista.length === 0) {
+                tabela.innerHTML = "<tr><td colspan='5' style='text-align:center;color:#999'>Nenhum usuário encontrado.</td></tr>";
+                total.textContent = "";
+                return;
+            }
+
+            lista.forEach(function(u) {
+                const humorClasse  = u.humor === "Bem" ? "humor-bem" : u.humor === "Neutro" ? "humor-neutro" : "humor-mal";
+                const statusClasse = u.status === "Ativo" ? "status-ativo" : "status-inativo";
+
+                tabela.innerHTML += "<tr>" +
+                    "<td>" + u.nome + "</td>" +
+                    "<td>" + u.email + "</td>" +
+                    "<td class='" + humorClasse  + "'>" + u.humor  + "</td>" +
+                    "<td class='" + statusClasse + "'>" + u.status + "</td>" +
+                    "<td>" + u.cadastro + "</td>" +
+                    "</tr>";
+            });
+
+            total.textContent = "Total: " + lista.length + " usuário(s)";
+        }
+
+        function filtrar() {
+            const busca = document.getElementById("busca").value.toLowerCase();
+            const filtrados = usuarios.filter(function(u) {
+                return u.nome.toLowerCase().includes(busca) || u.email.toLowerCase().includes(busca);
+            });
+            renderizar(filtrados);
+        }
+
+        renderizar(usuarios);
+    </script>
+
+</body>
+</html>

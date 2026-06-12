@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Editar Perfil</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: linear-gradient(to bottom right, #dbeafe, #f0f9ff);
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+    }
+
+    .container {
+      background: #fff;
+      width: 100%;
+      max-width: 500px;
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .container h1 {
+      text-align: center;
+      color: #2563eb;
+      margin-bottom: 25px;
+    }
+
+    .profile-image {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+
+    .profile-image img {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid #93c5fd;
+    }
+
+    .form-group {
+      margin-bottom: 18px;
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 6px;
+      color: #374151;
+      font-weight: bold;
+    }
+
+    .form-group input,
+    .form-group textarea,
+    .form-group select {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #cbd5e1;
+      border-radius: 10px;
+      outline: none;
+      transition: 0.3s;
+    }
+
+    .form-group input:focus,
+    .form-group textarea:focus,
+    .form-group select:focus {
+      border-color: #2563eb;
+      box-shadow: 0 0 5px rgba(37, 99, 235, 0.4);
+    }
+
+    .form-group textarea {
+      resize: none;
+      height: 100px;
+    }
+
+    .btn-save {
+      width: 100%;
+      padding: 14px;
+      border: none;
+      border-radius: 10px;
+      background: #2563eb;
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .btn-save:hover {
+      background: #1d4ed8;
+    }
+
+    .info-text {
+      text-align: center;
+      font-size: 14px;
+      color: #6b7280;
+      margin-top: 15px;
+    }
+
+    @media (max-width: 600px) {
+      .container {
+        padding: 20px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+    <h1>Editar Perfil</h1>
+
+    <div class="profile-image">
+      <img src="https://via.placeholder.com/100" alt="Foto do usuário">
+    </div>
+
+    <form>
+
+      <div class="form-group">
+        <label for="nome">Nome</label>
+        <input type="text" id="nome" placeholder="Digite seu nome">
+      </div>
+
+      <div class="form-group">
+        <label for="email">E-mail</label>
+        <input type="email" id="email" placeholder="Digite seu e-mail">
+      </div>
+
+      <div class="form-group">
+        <label for="idade">Idade</label>
+        <input type="number" id="idade" placeholder="Digite sua idade">
+      </div>
+
+      <div class="form-group">
+        <label for="nivel">Nível de ansiedade</label>
+        <select id="nivel">
+          <option>Leve</option>
+          <option>Moderado</option>
+          <option>Alto</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="bio">Como você está se sentindo hoje?</label>
+        <textarea id="bio" placeholder="Escreva aqui..."></textarea>
+      </div>
+
+      <div class="form-group">
+        <label for="senha">Nova senha</label>
+        <input type="password" id="senha" placeholder="Digite uma nova senha">
+      </div>
+
+      <button type="submit" class="btn-save">
+        Salvar Alterações
+      </button>
+
+    </form>
+
+    <p class="info-text">
+      Seu bem-estar importa 💙
+    </p>
+
+  </div>
+
+</body>
+</html>

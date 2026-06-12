@@ -1,0 +1,7 @@
+Para desenvolver a ideia do aplicativo, foi feito um levantamento de alguns apps que já trabalham com ansiedade e bem-estar emocional.
+O Calm é bastante conhecido e oferece meditações guiadas, exercícios de respiração e conteúdos voltados para relaxamento e sono. Ele ajuda no controle do estresse no dia a dia, mas não é tão focado em momentos de crise.
+O Headspace tem uma proposta parecida, com meditação e programas que ensinam a lidar melhor com a ansiedade ao longo do tempo, funcionando mais como um apoio contínuo para a saúde mental.
+Já o Rootd se aproxima mais da proposta do projeto, pois foi pensado para ajudar em crises de ansiedade, oferecendo exercícios imediatos e acompanhamento emocional.
+Outro exemplo é o Sanvello, que permite registrar o humor, fazer testes de ansiedade e acompanhar o estado emocional ao longo do tempo.
+De forma geral, esses aplicativos oferecem ferramentas úteis para o bem-estar, mas muitos focam mais em meditação ou acompanhamento contínuo. O diferencial do aplicativo proposto é trazer uma ajuda rápida e prática para momentos de ansiedade no dia a dia, principalmente para estudantes universitários.
+
