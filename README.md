@@ -67,28 +67,28 @@ O site é organizado em cinco áreas:
 
 - [Resumo das entrevistas com usuários](Midia/resumo%20entrevistas.txt)
 - [Validação das 20 hipóteses](Documentos/01-Pesquisa%20e%20An%C3%A1lise/Valida%C3%A7%C3%A3o%2020%20hip%C3%B3teses)
-- [Melhores ideias do brainstorm](Documentos/Melhores%20ideias%20do%20brainstorm.txt)
-- [Análise dos produtos similares](Documentos/An%C3%A1lise%20dos%20produtos%20similares.txt)
+- [Melhores ideias do brainstorm](Documentos/02-Conceito%20e%20Estratégia/Melhores%20ideias%20do%20brainstorm.txt)
+- [Análise dos produtos similares](Documentos/01-Pesquisa%20e%20Análise/Análise%20dos%20produtos%20similares.txt)
 
 ---
 
 ## Design e identidade visual
 
-- [Definição da identidade visual](Documentos/Defini%C3%A7%C3%A3o%20da%20identidade%20visual)
+- [Definição da identidade visual](Documentos/04-Design%20e%20Identidade/Definição%20da%20identidade%20visual)
 - [Fluxograma de telas](Documentos/fluxograma)
-- [Diferencial do projeto](Documentos/diferencial)
-- [Origem e significado do nome Mindly](https://github.com/paitzaina/ENG4021-Grupo1/blob/main/Documentos/mindly.txt)
+- [Diferencial do projeto](Documentos/03-Requisitos%20Técnicos/fluxograma)
+- [Origem e significado do nome Mindly](Documentos/02-Conceito%20e%20Estratégia/mindly.txt)
 
 ---
 
 ## Documentação técnica
 
-- [Escopo técnico e viabilidade](Documentos/Escopo%20Tecnico%20Viabilidade.txt)
-- [Implementações diferenciais em relação aos concorrentes](Documentos/definirImplementacoes.txt)
-- [Impactos sociais negativos da aplicação](Documentos/Impactos%20Sociais%20Negativos%20da%20Aplicacao)
-- [Possibilidades de crescimento e ampliação](Documentos/Possibilidades%20de%20Crescimento%20e%20Ampliacao%20da%20Aplicacao)
-- [Estratégia para atrair usuários](https://github.com/brunomlima9/ENG4021-Grupo1/blob/main/estrategia_atrair_usuarios) _(aguardando merge)_
-- [Implementação da estratégia de atração de usuários](https://github.com/brunomlima9/ENG4021-Grupo1/blob/main/implementar_estrategia_atrair_usuarios) _(aguardando merge)_
+- [Escopo técnico e viabilidade](Documentos/03-Requisitos%20Técnicos/Escopo%20Tecnico%20Viabilidade.txt)
+- [Implementações diferenciais em relação aos concorrentes](Documentos/07-Funcionalidades/definirImplementacoes.txt)
+- [Impactos sociais negativos da aplicação](Documentos/06-Impacto%20Social/Impactos%20Sociais%20Negativos%20da%20Aplicacao)
+- [Possibilidades de crescimento e ampliação](Documentos/05-Estratégia%20de%20Crescimento/Possibilidades%20de%20Crescimento%20e%20Ampliacao%20da%20Aplicacao)
+- [Estratégia para atrair usuários](Documentos/05-Estratégia%20de%20Crescimento/estrategia_atrair_usuarios)
+- [Implementação da estratégia de atração de usuários](Documentos/05-Estratégia%20de%20Crescimento/implementar_estrategia_atrair_usuarios)
 
 ---
 
