@@ -1,5 +1,4 @@
 instagram: https://www.instagram.com/soumindly/
 x: https://x.com/soumindly
 tiktok: 
-facebook: 
-linkedin: 
+linkedin: https://www.linkedin.com/in/mindly-app-14925a416/
