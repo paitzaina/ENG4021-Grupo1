@@ -66,7 +66,7 @@ O site é organizado em cinco áreas:
 ## Pesquisa e validação
 
 - [Resumo das entrevistas com usuários](Midia/resumo%20entrevistas.txt)
-- [Validação das 20 hipóteses](Documentos/Valida%C3%A7%C3%A3o%2020%20hip%C3%B3teses)
+- [Validação das 20 hipóteses](Documentos/01-Pesquisa%20e%20An%C3%A1lise/Valida%C3%A7%C3%A3o%2020%20hip%C3%B3teses)
 - [Melhores ideias do brainstorm](Documentos/Melhores%20ideias%20do%20brainstorm.txt)
 - [Análise dos produtos similares](Documentos/An%C3%A1lise%20dos%20produtos%20similares.txt)
 
