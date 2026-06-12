@@ -1,0 +1,45 @@
+{% extends 'core/base.html' %}
+
+{% block title %}Mindly — Notícias{% endblock %}
+
+{% block content %}
+<div class="topbar">
+  <a href="{% url 'home' %}" class="back">‹</a>
+  <span class="topbar-title">Notícias</span>
+</div>
+
+<div class="screen-content">
+
+  <div class="news-banner">
+    <span class="banner-tag">Destaque</span>
+    <div class="banner-title">Como a ansiedade afeta jovens universitários em 2025</div>
+    <div class="banner-date">07 de maio de 2025</div>
+  </div>
+
+  <div class="news-section-title">Mais recentes</div>
+
+  <div class="news-grid">
+    <div class="news-card">
+      <div class="nc-tag">Bem-estar</div>
+      <div class="nc-title">5 hábitos para dormir melhor</div>
+      <div class="nc-date">06/05</div>
+    </div>
+    <div class="news-card">
+      <div class="nc-tag">Pesquisa</div>
+      <div class="nc-title">Meditação reduz cortisol em 30%</div>
+      <div class="nc-date">05/05</div>
+    </div>
+    <div class="news-card">
+      <div class="nc-tag">Dicas</div>
+      <div class="nc-title">Redes sociais e saúde mental</div>
+      <div class="nc-date">04/05</div>
+    </div>
+    <div class="news-card">
+      <div class="nc-tag">Terapia</div>
+      <div class="nc-title">Quando procurar um psicólogo?</div>
+      <div class="nc-date">03/05</div>
+    </div>
+  </div>
+
+</div>
+{% endblock %}

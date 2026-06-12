@@ -1,0 +1,31 @@
+{% extends 'core/base.html' %}
+
+{% block title %}Mindly — Modo Crise{% endblock %}
+
+{% block content %}
+<div class="crise-screen">
+
+  <div class="crise-topbar">
+    <a href="{% url 'home' %}" class="back">‹</a>
+    <span class="topbar-title">Modo Crise</span>
+  </div>
+
+  <div class="crise-msg">
+    <div class="msg-label">Mensagem de apoio</div>
+    <div class="msg-text">"Você está seguro(a). Isso vai passar. Respire fundo e siga comigo."</div>
+  </div>
+
+  <div class="crise-exercise">
+    <div class="ex-title">Exercício Guiado</div>
+    <div class="ex-circle">🌬️</div>
+    <div class="ex-desc">Vamos respirar juntos. Inspire pelo nariz, segure e expire devagar.</div>
+    <button class="start-btn">Começar agora</button>
+  </div>
+
+  <div class="crise-bottom">
+    <button class="btn-ajuda">📞 Contato de Ajuda</button>
+    <button class="btn-audio">🎵 Áudio de Fundo</button>
+  </div>
+
+</div>
+{% endblock %}

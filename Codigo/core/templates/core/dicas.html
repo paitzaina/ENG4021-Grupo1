@@ -1,0 +1,54 @@
+{% extends 'core/base.html' %}
+
+{% block title %}Mindly — Dicas{% endblock %}
+
+{% block content %}
+<div class="topbar">
+  <a href="{% url 'home' %}" class="back">‹</a>
+  <span class="topbar-title">Dicas</span>
+</div>
+
+<div class="screen-content">
+  <div class="dicas-layout">
+
+    <div class="dicas-cats">
+      <button class="cat-btn active">Ansiedade</button>
+      <button class="cat-btn">Estresse</button>
+      <button class="cat-btn">Foco/<br>estudos</button>
+      <button class="cat-btn">Sono</button>
+    </div>
+
+    <div class="dicas-content">
+      <div class="dica-card">
+        <span class="dica-icon">⚡</span>
+        <div>
+          <div class="dica-label">Truques Rápidos</div>
+          <div class="dica-sub">Para o momento</div>
+        </div>
+      </div>
+      <div class="dica-card">
+        <span class="dica-icon">🎵</span>
+        <div>
+          <div class="dica-label">Áudios Relaxantes</div>
+          <div class="dica-sub">Sons e músicas</div>
+        </div>
+      </div>
+      <div class="dica-card">
+        <span class="dica-icon">📌</span>
+        <div>
+          <div class="dica-label">Dica do Dia</div>
+          <div class="dica-sub">Atualizada diariamente</div>
+        </div>
+      </div>
+      <div class="dica-card">
+        <span class="dica-icon">💬</span>
+        <div>
+          <div class="dica-label">Mensagem Motivadora</div>
+          <div class="dica-sub">Palavras de apoio</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+{% endblock %}

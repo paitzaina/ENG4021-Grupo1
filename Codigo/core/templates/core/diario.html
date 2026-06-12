@@ -1,0 +1,32 @@
+{% extends 'core/base.html' %}
+
+{% block title %}Mindly — Diário{% endblock %}
+
+{% block content %}
+<div class="topbar">
+  <a href="{% url 'home' %}" class="back">‹</a>
+  <span class="topbar-title">Diário</span>
+</div>
+
+<div class="screen-content">
+  <div class="diario-layout">
+
+    <div class="diario-dates">
+      <div class="date-label">Datas</div>
+      <div class="date-item active">Hoje</div>
+      <div class="date-item">Ontem</div>
+      <div class="date-item">Seg</div>
+      <div class="date-item">Dom</div>
+      <div class="date-item">Sáb</div>
+      <div class="date-item">Sex</div>
+    </div>
+
+    <div class="diario-main">
+      <div class="content-label">Anotações do dia</div>
+      <textarea class="diario-textarea" placeholder="Como você está se sentindo hoje?"></textarea>
+      <button class="fab" title="Nova entrada">+</button>
+    </div>
+
+  </div>
+</div>
+{% endblock %}

@@ -1,0 +1,50 @@
+ESCOPO TÉCNICO E VIABILIDADE DO PROJETO
+
+---
+
+Tecnologias utilizadas
+
+* Frontend: HTML, CSS e JavaScript — responsáveis pela interface visual e interação com o usuário
+* Backend: Python com Django — responsável pela lógica da aplicação, rotas e comunicação com o banco de dados
+* Banco de dados: SQLite (desenvolvimento) / PostgreSQL (produção) — armazena usuários, registros do diário, configurações e conteúdos
+* Hospedagem: a definir — opções como Railway, Render ou PythonAnywhere são gratuitas e compatíveis com Django
+
+---
+
+Escopo do projeto (o que será desenvolvido)
+
+* Tela de login e cadastro de usuário
+* Diário emocional — registro de anotações por data
+* Exercícios guiados — respiração, relaxamento e meditação
+* Dicas por categoria — ansiedade, estresse, foco/estudos e sono
+* Feed de notícias sobre saúde mental
+* Modo Crise — mensagem motivadora, exercício guiado, contato de ajuda e áudio de fundo
+
+---
+
+O que está fora do escopo (não será desenvolvido neste projeto)
+
+* Atendimento com psicólogos ou profissionais de saúde
+* Integração com planos de saúde ou prontuários médicos
+* Aplicativo nativo para iOS ou Android (o projeto será web, acessível pelo navegador)
+* Sistema de pagamento ou assinatura
+
+---
+
+Viabilidade
+
+O projeto é viável dentro do prazo e dos recursos da disciplina pelos seguintes motivos:
+
+* Todas as tecnologias utilizadas (HTML, CSS, Python, Django) são ensinadas ao longo da matéria, sem necessidade de aprendizado externo
+* O escopo foi definido com funcionalidades claras e realizáveis por uma equipe de 5 pessoas em sprints semanais
+* Não há dependências externas pagas — todas as ferramentas e hospedagem podem ser gratuitas
+* O público-alvo é bem definido (jovens universitários de 18 a 35 anos) e já foi validado pelas entrevistas da Sprint 1
+* As funcionalidades principais (diário, exercícios, crise) foram validadas nas hipóteses da Sprint 2 como as mais relevantes para os usuários
+
+---
+
+Riscos técnicos identificados
+
+* Falhas na área de Crise em momentos de uso real — mitigação: testes constantes e manutenção ativa (identificado na matriz de risco da Sprint 3)
+* Segurança dos dados do diário emocional — mitigação: autenticação de usuário e boas práticas de armazenamento no Django
+* Compatibilidade mobile — mitigação: desenvolver o frontend com design responsivo desde o início

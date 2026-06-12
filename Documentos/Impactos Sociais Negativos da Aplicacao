@@ -1,0 +1,17 @@
+IMPACTOS SOCIAIS NEGATIVOS DA APLICAÇÃO
+
+* Substituição indevida de acompanhamento profissional: o usuário pode usar o app como substituto de terapia, adiando a busca por ajuda especializada e agravando quadros de ansiedade e depressão. É importante deixar claro que a ferramenta é de apoio, não de tratamento.
+
+* Dependência tecnológica e emocional: o uso frequente pode fazer com que o usuário não consiga lidar com a ansiedade sem o app, o que é especialmente preocupante no público jovem que já tem alta dependência de smartphones.
+
+* Privacidade e segurança dos dados: o diário emocional e o registro de gatilhos coletam informações muito sensíveis. Um vazamento ou uso indevido pode causar exposição constrangedora e discriminação. Esse risco foi identificado na matriz de risco da Sprint 3 como nível crítico.
+
+* Conteúdo mal interpretado: textos sobre ansiedade e depressão podem levar à autodiagnose errada ou aumentar a ansiedade de quem não tem contexto clínico. Na pesquisa de entrevistas, identificamos que alguns participantes já se autodiagnosticaram com base em pesquisas online.
+
+* Exclusão digital: o app pressupõe smartphone com acesso à internet, excluindo populações de menor renda, idosos ou pessoas em regiões com pouca conectividade.
+
+* Estigmatização: se o app aparecer na tela em ambientes onde transtornos mentais ainda são tabu, o usuário pode sofrer julgamentos. Uma opção de ícone discreto e notificações sem conteúdo sensível na tela de bloqueio ajudaria a evitar isso.
+
+* Amplificação de sentimentos negativos: registrar momentos de sofrimento ativamente pode, para alguns perfis, amplificar os sentimentos negativos em vez de ajudar a processá-los, especialmente sem acompanhamento profissional.
+
+* Uso em crise grave sem suporte adequado: a área de Crise pode ser insuficiente para situações de risco real. O botão "Contato de Ajuda" precisa ter acesso visível ao CVV (188) e ao SAMU (192) para encaminhar o usuário ao suporte necessário.

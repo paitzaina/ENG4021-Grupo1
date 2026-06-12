@@ -1,0 +1,37 @@
+Análise de concorrentes
+
+Headspace
+O que é: aplicativo de meditação
+Pontos fortes: interface simples, bom para iniciantes, conteúdo guiado de qualidade
+Pontos fracos: pouca personalização, não oferece suporte humano
+Oportunidade: incluir análise emocional mais profunda e recomendações personalizadas
+
+Calm
+O que é: aplicativo focado em relaxamento e sono
+Pontos fortes: excelente para melhorar o sono, conteúdos variados (sons, histórias), design atrativo
+Pontos fracos: foco muito passivo, pouca interação ativa com o usuário
+Oportunidade: oferecer acompanhamento mais ativo dependendo do estado emocional
+
+BetterHelp
+O que é: plataforma de terapia online com psicólogos
+Pontos fortes: acesso a profissionais, atendimento personalizado, múltiplos formatos (chat, áudio, vídeo)
+Pontos fracos: custo elevado, menos acessível
+Oportunidade: criar solução mais acessível e preventiva antes da terapia
+
+Cíngulo
+O que é: aplicativo brasileiro de desenvolvimento emocional
+Pontos fortes: diário emocional, exercícios práticos, modo de apoio em crise
+Pontos fracos: conteúdo limitado, menor alcance global
+Oportunidade: ampliar funcionalidades e personalização com tecnologia mais avançada
+
+Happify
+O que é: aplicativo que usa jogos para melhorar o bem-estar mental
+Pontos fortes: uso de games, boa retenção de usuários, acompanhamento de progresso
+Pontos fracos: pode parecer superficial, abordagem não agrada todos os perfis
+Oportunidade: combinar games com ferramentas mais profundas
+
+Woebot
+O que é: chatbot com técnicas de terapia cognitivo-comportamental
+Pontos fortes: disponível 24h, interação rápida, feedback imediato
+Pontos fracos: interação limitada, falta de contato humano real
+Oportunidade: integrar chatbot com comunidade ou suporte humano 
