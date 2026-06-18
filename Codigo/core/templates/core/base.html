@@ -4,14 +4,46 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{% block title %}Mindly{% endblock %}</title>
+  <title>{% block title %}MindApp{% endblock %}</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="{% static 'core/css/style.css' %}">
 </head>
 <body>
-  <div class="app-container">
-    {% block content %}{% endblock %}
+  <div class="site-shell">
+
+    <nav class="sidebar">
+      <div class="sidebar-logo">
+        <div class="sidebar-logo-icon">
+          <svg viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="15" cy="11" r="7" fill="white" opacity="0.9"/>
+            <path d="M9 18 Q9 26 15 26 Q21 26 21 18" stroke="white" stroke-width="2" fill="none" stroke-linecap="round"/>
+            <circle cx="12" cy="10" r="1.5" fill="#5ba4cf"/>
+            <circle cx="18" cy="10" r="1.5" fill="#5ba4cf"/>
+            <path d="M12 14 Q15 16.5 18 14" stroke="#5ba4cf" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <span class="sidebar-logo-name">MindApp</span>
+      </div>
+
+      <div class="sidebar-links">
+        <a href="{% url 'home' %}" class="sidebar-link {% if request.resolver_match.url_name == 'home' %}active{% endif %}">Inicio</a>
+        <a href="{% url 'diario' %}" class="sidebar-link {% if request.resolver_match.url_name == 'diario' %}active{% endif %}">Diario</a>
+        <a href="{% url 'exercicios' %}" class="sidebar-link {% if request.resolver_match.url_name == 'exercicios' %}active{% endif %}">Exercicios</a>
+        <a href="{% url 'dicas' %}" class="sidebar-link {% if request.resolver_match.url_name == 'dicas' %}active{% endif %}">Dicas</a>
+        <a href="{% url 'noticias' %}" class="sidebar-link {% if request.resolver_match.url_name == 'noticias' %}active{% endif %}">Noticias</a>
+      </div>
+
+      <div class="sidebar-bottom">
+        <a href="{% url 'login' %}" class="sidebar-link sidebar-login {% if request.resolver_match.url_name == 'login' %}active{% endif %}">Entrar</a>
+        <a href="{% url 'crise' %}" class="sidebar-crise">Crise</a>
+      </div>
+    </nav>
+
+    <div class="app-container">
+      {% block content %}{% endblock %}
+    </div>
+
   </div>
 </body>
 </html>
