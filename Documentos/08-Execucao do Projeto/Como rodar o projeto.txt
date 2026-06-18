@@ -1,0 +1,21 @@
+Como rodar o projeto Mindly no GitHub Codespaces
+
+1. No GitHub, abra o repositorio e clique em Code -> Codespaces -> seu Codespace (ou crie um novo com "Create codespace on main").
+
+2. Espere o ambiente carregar. O terminal deve abrir com o ambiente virtual ja ativo, indicado por (.venv) no inicio da linha. Se nao estiver ativo, rode: source .venv/bin/activate
+
+3. Entre na pasta do projeto Django: cd Codigo
+
+4. Instale as dependencias (apenas na primeira vez ou se o requirements.txt mudou): pip install -r requirements.txt
+
+5. Rode as migracoes do banco (apenas se houver migracoes novas): python manage.py migrate
+
+6. Inicie o servidor: python manage.py runserver 0.0.0.0:8000
+
+7. O VS Code vai notificar que a porta 8000 esta disponivel. Clique em "Open in Browser", ou abra a aba PORTS e clique no icone de globo na porta 8000.
+
+8. Para acessar o admin do Django, abra /admin na URL gerada e entre com o usuario mindly e senha 123.
+
+9. Para parar o servidor, aperte Ctrl+C no terminal. Para rodar de novo, repita o passo 6 (no precisa repetir os passos 4 e 5, a menos que algo tenha mudado).
+
+10. Para parar o Codespace por completo (e nao deixar consumindo horas), va em Code -> Codespaces, clique nos tres pontinhos do Codespace ativo e selecione "Stop codespace".
