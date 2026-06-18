@@ -1,10 +1,10 @@
 {% extends 'core/base.html' %}
 
-{% block title %}Mindly — Dicas{% endblock %}
+{% block title %}Mindly - Dicas{% endblock %}
 
 {% block content %}
 <div class="topbar">
-  <a href="{% url 'home' %}" class="back">‹</a>
+  <a href="{% url 'home' %}" class="back"><</a>
   <span class="topbar-title">Dicas</span>
 </div>
 
@@ -19,34 +19,21 @@
     </div>
 
     <div class="dicas-content">
+      {% for dica in dicas %}
       <div class="dica-card">
-        <span class="dica-icon">⚡</span>
+        <span class="dica-icon">💡</span>
         <div>
-          <div class="dica-label">Truques Rápidos</div>
-          <div class="dica-sub">Para o momento</div>
+          <div class="dica-label">{{ dica.titulo }}</div>
+          <div class="dica-sub">{{ dica.descricao }}</div>
         </div>
       </div>
+      {% empty %}
       <div class="dica-card">
-        <span class="dica-icon">🎵</span>
         <div>
-          <div class="dica-label">Áudios Relaxantes</div>
-          <div class="dica-sub">Sons e músicas</div>
+          <div class="dica-label">Nenhuma dica cadastrada ainda.</div>
         </div>
       </div>
-      <div class="dica-card">
-        <span class="dica-icon">📌</span>
-        <div>
-          <div class="dica-label">Dica do Dia</div>
-          <div class="dica-sub">Atualizada diariamente</div>
-        </div>
-      </div>
-      <div class="dica-card">
-        <span class="dica-icon">💬</span>
-        <div>
-          <div class="dica-label">Mensagem Motivadora</div>
-          <div class="dica-sub">Palavras de apoio</div>
-        </div>
-      </div>
+      {% endfor %}
     </div>
 
   </div>

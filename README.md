@@ -118,9 +118,9 @@ O site é organizado em cinco áreas:
 
 ### Modelos de dados
 
-- [models — Notícia](https://github.com/gabiriva/ENG4021-Grupo1/blob/main/models%20noticia) _(aguardando merge)_
-- [models — Dica](https://github.com/gabiriva/ENG4021-Grupo1/blob/main/models%20dica) _(aguardando merge)_
-- [models — Exercício](https://github.com/gabiriva/ENG4021-Grupo1/blob/main/models%20exercicio) _(aguardando merge)_
+- [models — Notícia](https://github.com/paitzaina/ENG4021-Grupo1/blob/main/Codigo/core/models.py)
+- [models — Dica](https://github.com/paitzaina/ENG4021-Grupo1/blob/main/Codigo/core/models.py)
+- [models — Exercício](https://github.com/paitzaina/ENG4021-Grupo1/blob/main/Codigo/core/models.py)
 - [models — Usuário](https://github.com/paitzaina/ENG4021-Grupo1/blob/main/Codigo/usuarios.py) 
 - [models — Diário](https://github.com/paitzaina/ENG4021-Grupo1/blob/main/Codigo/diario.py) 
 - [models — Crise](https://github.com/paitzaina/ENG4021-Grupo1/blob/main/Codigo/crise.py) 
