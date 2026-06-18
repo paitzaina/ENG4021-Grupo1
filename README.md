@@ -89,6 +89,7 @@ O site é organizado em cinco áreas:
 - [Possibilidades de crescimento e ampliação](Documentos/05-Estratégia%20de%20Crescimento/Possibilidades%20de%20Crescimento%20e%20Ampliacao%20da%20Aplicacao)
 - [Estratégia para atrair usuários](Documentos/05-Estratégia%20de%20Crescimento/estrategia_atrair_usuarios)
 - [Implementação da estratégia de atração de usuários](Documentos/05-Estratégia%20de%20Crescimento/implementar_estrategia_atrair_usuarios)
+- [Como rodar o projeto no Codespace](Documentos/08-Execucao%20do%20Projeto/Como%20rodar%20o%20projeto.txt)
 
 ---
 
@@ -98,9 +99,12 @@ O site é organizado em cinco áreas:
 
 - [views.py — home, diário, exercícios, dicas, notícias, crise](Codigo/core/views.py)
 - [urls.py — roteamento das páginas](Codigo/core/urls.py)
+- [urls.py - admin habilitado](Codigo/mindapp_project/urls.py)
 
 ### Templates HTML
 
+- [base.html](Codigo/core/templates/core/base.html)
+- [login.html](Codigo/core/templates/core/login.html)
 - [home.html](Codigo/core/templates/core/home.html)
 - [diario.html](Codigo/core/templates/core/diario.html)
 - [exercicios.html](Codigo/core/templates/core/exercicios.html)
