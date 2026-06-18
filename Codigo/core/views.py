@@ -1,6 +1,12 @@
 from django.shortcuts import render
 
 
+def login_view(request):
+    # Tela de login integrada ao Django (visual + formulario).
+    # Autenticacao real (validar usuario/senha, sessao) e tarefa da proxima sprint.
+    return render(request, 'core/login.html')
+
+
 def home(request):
     return render(request, 'core/home.html')
 
