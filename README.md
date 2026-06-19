@@ -121,9 +121,8 @@ O site é organizado em cinco áreas:
 - [models — Notícia](https://github.com/paitzaina/ENG4021-Grupo1/blob/main/Codigo/core/models.py)
 - [models — Dica](https://github.com/paitzaina/ENG4021-Grupo1/blob/main/Codigo/core/models.py)
 - [models — Exercício](https://github.com/paitzaina/ENG4021-Grupo1/blob/main/Codigo/core/models.py)
-- [models — Usuário](https://github.com/paitzaina/ENG4021-Grupo1/blob/main/Codigo/usuarios.py) 
-- [models — Diário](https://github.com/paitzaina/ENG4021-Grupo1/blob/main/Codigo/diario.py) 
-- [models — Crise](https://github.com/paitzaina/ENG4021-Grupo1/blob/main/Codigo/crise.py) 
+- [models — Diário](https://github.com/paitzaina/ENG4021-Grupo1/blob/main/Codigo/core/models.py) 
+- [models — Crise](https://github.com/paitzaina/ENG4021-Grupo1/blob/main/Codigo/core/models.py) 
 
 ### Dependências e configuração
 
