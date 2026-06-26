@@ -20,11 +20,13 @@
 
   <div class="news-grid">
     {% for n in noticias %}
-    <div class="news-card">
-      <div class="nc-tag">{{ n.categoria }}</div>
-      <div class="nc-title">{{ n.titulo }}</div>
-      <div class="nc-date">{{ n.data|date:"d/m" }}</div>
-    </div>
+    <a href="{% url 'noticia_detalhe' n.id %}" class="news-card-link">
+      <div class="news-card">
+        <div class="nc-tag">{{ n.categoria }}</div>
+        <div class="nc-title">{{ n.titulo }}</div>
+        <div class="nc-date">{{ n.data|date:"d/m" }}</div>
+      </div>
+    </a>
     {% empty %}
     <div class="news-card">
       <div class="nc-title">Nenhuma noticia cadastrada ainda.</div>

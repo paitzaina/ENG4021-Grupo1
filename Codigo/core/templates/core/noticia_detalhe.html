@@ -1,0 +1,26 @@
+{% extends 'core/base.html' %}
+
+{% block title %}Mindly - {{ noticia.titulo }}{% endblock %}
+
+{% block content %}
+<div class="topbar">
+  <a href="{% url 'noticias' %}" class="back"><</a>
+  <span class="topbar-title">Noticia</span>
+</div>
+
+<div class="screen-content">
+
+  <div class="news-detail-hero">
+    <span class="banner-tag">{{ noticia.categoria }}</span>
+    <div class="detail-title">{{ noticia.titulo }}</div>
+    <div class="detail-date">{{ noticia.data|date:"d/m/Y" }}</div>
+  </div>
+
+  <div class="news-detail-body">{{ noticia.conteudo }}</div>
+
+  {% if noticia.link %}
+  <a href="{{ noticia.link }}" class="news-source-btn" target="_blank">Ler materia completa</a>
+  {% endif %}
+
+</div>
+{% endblock %}

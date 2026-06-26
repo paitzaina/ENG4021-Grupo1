@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render,get_object_or_404
 from .models import Exercicio, Dica, Noticia
 
 
@@ -30,6 +30,11 @@ def dicas(request):
 def noticias(request):
     lista_noticias = Noticia.objects.all()
     return render(request, 'core/noticias.html', {'noticias': lista_noticias})
+
+
+def noticia_detalhe(request, id):
+    noticia = get_object_or_404(Noticia, id=id)
+    return render(request, 'core/noticia_detalhe.html', {'noticia': noticia})
 
 
 def crise(request):
