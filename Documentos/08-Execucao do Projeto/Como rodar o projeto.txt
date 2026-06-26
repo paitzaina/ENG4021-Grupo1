@@ -5,5 +5,4 @@ python manage.py migrate
 python manage.py runserver 0.0.0.0:8000
 admin - /admin (usuario mindly, senha 123)
 parar o servidor - Ctrl+C
-rodar de novo - python manage.py runserver 0.0.0.0:8000
 parar o codespace - Code -> Codespaces -> (tres pontinhos) -> Stop codespace
