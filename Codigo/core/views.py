@@ -28,9 +28,12 @@ def dicas(request):
 
 
 def noticias(request):
-    lista_noticias = Noticia.objects.all()
-    return render(request, 'core/noticias.html', {'noticias': lista_noticias})
-
+    lista_noticias = Noticia.objects.all().order_by('-data')
+    noticia_destaque = Noticia.objects.filter(destaque=True).first()
+    return render(request, 'core/noticias.html', {
+        'noticias': lista_noticias,
+        'noticia_destaque': noticia_destaque,
+    })
 
 def noticia_detalhe(request, id):
     noticia = get_object_or_404(Noticia, id=id)

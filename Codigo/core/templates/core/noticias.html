@@ -10,11 +10,15 @@
 
 <div class="screen-content">
 
-  <div class="news-banner">
-    <span class="banner-tag">Destaque</span>
-    <div class="banner-title">Como a ansiedade afeta jovens universitarios em 2025</div>
-    <div class="banner-date">07 de maio de 2025</div>
-  </div>
+  {% if noticia_destaque %}
+  <a href="{% url 'noticia_detalhe' noticia_destaque.id %}" class="news-card-link">
+    <div class="news-banner">
+      <span class="banner-tag">Destaque</span>
+      <div class="banner-title">{{ noticia_destaque.titulo }}</div>
+      <div class="banner-date">{{ noticia_destaque.data|date:"d/m/Y" }}</div>
+    </div>
+  </a>
+  {% endif %}
 
   <div class="news-section-title">Mais recentes</div>
 
