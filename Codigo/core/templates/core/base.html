@@ -7,7 +7,7 @@
   <title>{% block title %}MindApp{% endblock %}</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="{% static 'core/css/style.css' %}?v=2">
+  <link rel="stylesheet" href="{% static 'core/css/style.css' %}?v=6">
 </head>
 <body>
   <div class="site-shell">
@@ -35,7 +35,14 @@
       </div>
 
       <div class="sidebar-bottom">
+        {% if request.user.is_authenticated %}
+        <form method="post" action="{% url 'logout' %}" class="sidebar-logout-form">
+          {% csrf_token %}
+          <button type="submit" class="sidebar-link sidebar-login">Sair</button>
+        </form>
+        {% else %}
         <a href="{% url 'login' %}" class="sidebar-link sidebar-login {% if request.resolver_match.url_name == 'login' %}active{% endif %}">Entrar</a>
+        {% endif %}
         <a href="{% url 'crise' %}" class="sidebar-crise">Crise</a>
       </div>
     </nav>

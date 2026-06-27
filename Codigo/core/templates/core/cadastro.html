@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>MindApp - Entrar</title>
+  <title>MindApp - Cadastro</title>
   <link rel="stylesheet" href="{% static 'core/css/style.css' %}?v=4">
 </head>
 <body>
@@ -14,14 +14,14 @@
       <div class="auth-logo"></div>
       <div class="auth-appname">MindApp</div>
       <div class="auth-tagline">Acalme sua mente a qualquer momento, de onde estiver</div>
-      <div class="auth-title">Bem-vindo(a) de volta</div>
-      <div class="auth-subtitle">Faca login para continuar</div>
+      <div class="auth-title">Crie sua conta</div>
+      <div class="auth-subtitle">Comece a cuidar de voce hoje</div>
 
       {% if erro %}
       <div class="auth-erro">{{ erro }}</div>
       {% endif %}
 
-      <form class="auth-form" method="post" action="{% url 'login' %}">
+      <form class="auth-form" method="post" action="{% url 'cadastro' %}">
         {% csrf_token %}
         <div class="form-group">
           <label>E-MAIL</label>
@@ -31,11 +31,15 @@
           <label>SENHA</label>
           <input type="password" placeholder="********" name="senha" required>
         </div>
-        <button type="submit" class="auth-btn-primary">Entrar</button>
+        <div class="form-group">
+          <label>CONFIRMAR SENHA</label>
+          <input type="password" placeholder="********" name="senha2" required>
+        </div>
+        <button type="submit" class="auth-btn-primary">Cadastrar</button>
       </form>
 
       <div class="auth-signup">
-        Nao tem conta? <a href="{% url 'cadastro' %}">Cadastre-se</a>
+        Ja tem conta? <a href="{% url 'login' %}">Entrar</a>
       </div>
     </div>
   </div>

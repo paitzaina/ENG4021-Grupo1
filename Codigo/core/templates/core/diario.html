@@ -4,7 +4,7 @@
 
 {% block content %}
 <div class="topbar">
-  <a href="{% url 'home' %}" class="back">‹</a>
+  <a href="{% url 'home' %}" class="back"><</a>
   <span class="topbar-title">Diário</span>
 </div>
 
@@ -13,18 +13,43 @@
 
     <div class="diario-dates">
       <div class="date-label">Datas</div>
-      <div class="date-item active">Hoje</div>
-      <div class="date-item">Ontem</div>
-      <div class="date-item">Seg</div>
-      <div class="date-item">Dom</div>
-      <div class="date-item">Sáb</div>
-      <div class="date-item">Sex</div>
+      {% for d in datas %}
+        <a href="?data={{ d.data|date:'Y-m-d' }}" class="date-item{% if d.selecionada %} active{% endif %}">{{ d.label }}</a>
+      {% endfor %}
     </div>
 
     <div class="diario-main">
-      <div class="content-label">Anotações do dia</div>
-      <textarea class="diario-textarea" placeholder="Como você está se sentindo hoje?"></textarea>
-      <button class="fab" title="Nova entrada">+</button>
+      <div class="content-label">Anotações de {{ data_selecionada|date:'d/m' }}</div>
+
+      {% if entradas %}
+        {% for entrada in entradas %}
+          <div class="diario-entrada">
+            {% if entrada.humor %}<div class="diario-humor">{{ entrada.humor }}</div>{% endif %}
+            <form method="post" action="{% url 'diario_editar' entrada.id %}">
+              {% csrf_token %}
+              <textarea name="texto" class="diario-textarea">{{ entrada.texto }}</textarea>
+              <input type="hidden" name="humor" value="{{ entrada.humor }}">
+              <div class="diario-entrada-actions">
+                <button type="submit" class="diario-salvar">Salvar</button>
+              </div>
+            </form>
+            <form method="post" action="{% url 'diario_excluir' entrada.id %}" class="diario-excluir-form">
+              {% csrf_token %}
+              <button type="submit" class="diario-excluir">Excluir</button>
+            </form>
+          </div>
+        {% endfor %}
+      {% else %}
+        <div class="diario-vazio">Nenhuma anotação neste dia ainda.</div>
+      {% endif %}
+
+      <form method="post" action="{% url 'diario_criar' %}" class="diario-nova-form">
+        {% csrf_token %}
+        <input type="hidden" name="data" value="{{ data_selecionada|date:'Y-m-d' }}">
+        <textarea name="texto" class="diario-textarea" placeholder="Como você está se sentindo hoje?"></textarea>
+        <input type="text" name="humor" class="diario-humor-input" placeholder="Humor (opcional)">
+        <button type="submit" class="fab" title="Nova entrada">+</button>
+      </form>
     </div>
 
   </div>

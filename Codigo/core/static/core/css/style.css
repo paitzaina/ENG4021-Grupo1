@@ -1134,3 +1134,102 @@ button {
     max-width: 320px;
   }
 }
+
+/* ===== DIARIO interativo ===== */
+.diario-dates .date-item { text-decoration: none; }
+
+.diario-entrada {
+  background: #f5fafd;
+  border: 1px solid #c8e0ef;
+  border-radius: 14px;
+  padding: 12px;
+  margin-bottom: 14px;
+}
+
+.diario-humor {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 600;
+  color: #5ba4cf;
+  background: #e8f2fb;
+  border-radius: 8px;
+  padding: 3px 8px;
+  margin-bottom: 6px;
+}
+
+.diario-entrada-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  margin-top: 6px;
+}
+
+.diario-salvar {
+  background: #5ba4cf;
+  color: #ffffff;
+  border: none;
+  border-radius: 10px;
+  padding: 6px 14px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.diario-excluir-form {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.diario-excluir {
+  background: none;
+  border: none;
+  color: #c0392b;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 4px 6px;
+}
+
+.diario-vazio {
+  font-size: 13px;
+  color: #7a93a8;
+  text-align: center;
+  padding: 18px 0;
+}
+
+.diario-nova-form {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.diario-humor-input {
+  border: 1.5px solid #c8e0ef;
+  border-radius: 10px;
+  padding: 8px 12px;
+  font-size: 13px;
+  color: #1e4d72;
+}
+
+.sidebar-logout-form {
+  margin: 0;
+}
+
+button.sidebar-link {
+  display: block;
+  width: 100%;
+  border: none;
+  background: none;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+.auth-erro {
+  background: #fdecea;
+  color: #c0392b;
+  border: 1px solid #f5c6cb;
+  border-radius: 8px;
+  padding: 10px 14px;
+  font-size: 13px;
+  margin-bottom: 16px;
+}

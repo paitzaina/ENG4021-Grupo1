@@ -1,5 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
+from datetime import date
 
 class Dica(models.Model):
     titulo = models.CharField(max_length=100)
@@ -31,13 +32,14 @@ class Noticia(models.Model):
 
 
 class Diario(models.Model):
-    usuario = models.ForeignKey(User, on_delete=models.CASCADE)
+    usuario = models.ForeignKey(User, on_delete=models.CASCADE, null=True, blank=True)
     texto = models.TextField()
-    data = models.DateField(auto_now_add=True)
-    humor = models.CharField(max_length=50)
+    data = models.DateField(default=date.today)
+    humor = models.CharField(max_length=50, blank=True)
 
     def __str__(self):
-        return f"Diário de {self.usuario.nome}"
+        nome = self.usuario.username if self.usuario else "anonimo"
+        return f"Diario de {nome} em {self.data}"
 
 
 class Crise(models.Model):
