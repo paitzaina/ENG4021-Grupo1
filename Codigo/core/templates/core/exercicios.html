@@ -4,7 +4,7 @@
 
 {% block content %}
 <div class="topbar">
-  <a href="{% url 'home' %}" class="back"><</a>
+  <a href="{% url 'home' %}" class="back">‹</a>
   <span class="topbar-title">Exercicios</span>
 </div>
 
@@ -13,18 +13,19 @@
 
     <div class="ex-list">
       {% for ex in exercicios %}
-      <button class="ex-btn{% if forloop.first %} active{% endif %}">
-        <span class="ex-icon">🫁</span> {{ ex.nome }}
+      <button type="button" class="ex-btn{% if forloop.first %} active{% endif %}" onclick="mindlySelecionarExercicio({{ forloop.counter0 }})">
+        <span class="ex-icon">{{ ex.icone }}</span> {{ ex.nome }}
       </button>
       {% endfor %}
     </div>
 
     {% for ex in exercicios %}
-    <div class="ex-area">
-      <div class="ex-circle">🫁</div>
+    <div class="ex-area{% if not forloop.first %} ex-area-oculto{% endif %}" id="ex-area-{{ forloop.counter0 }}">
+      <div class="ex-circle" id="ex-circle-{{ forloop.counter0 }}">{{ ex.icone }}</div>
       <div class="ex-title">{{ ex.nome }}</div>
-      <div class="ex-desc">{{ ex.instrucoes }} (duracao: {{ ex.duracao }} min)</div>
-      <button class="ex-start">Iniciar</button>
+      <div class="ex-desc" id="ex-desc-{{ forloop.counter0 }}" data-desc="{{ ex.instrucoes }}">{{ ex.instrucoes }}</div>
+      <div class="ex-timer" id="ex-timer-{{ forloop.counter0 }}">{{ ex.duracao }}:00</div>
+      <button type="button" class="ex-start" id="ex-start-{{ forloop.counter0 }}" onclick="mindlyIniciarExercicio({{ forloop.counter0 }}, {{ ex.duracao }}, '{{ ex.animacao }}', '{{ ex.tipo }}')">Iniciar</button>
     </div>
     {% empty %}
     <div class="ex-area">
@@ -34,4 +35,122 @@
 
   </div>
 </div>
+
+<script>
+function mindlySelecionarExercicio(idx) {
+  document.querySelectorAll('.ex-btn').forEach(function (btn, i) {
+    btn.classList.toggle('active', i === idx);
+  });
+  document.querySelectorAll('.ex-area').forEach(function (area, i) {
+    area.classList.toggle('ex-area-oculto', i !== idx);
+  });
+}
+
+var mindlyRoteiros = {
+  'Respiracao': [
+    { texto: 'Inspire pelo nariz...', seg: 4 },
+    { texto: 'Segure o ar...', seg: 7 },
+    { texto: 'Expire bem devagar pela boca...', seg: 8 }
+  ],
+  'Relaxamento': [
+    { texto: 'Tensione os pes e as pernas...', seg: 5 },
+    { texto: 'Solte e relaxe...', seg: 10 },
+    { texto: 'Tensione o abdomen e o peito...', seg: 5 },
+    { texto: 'Solte e relaxe...', seg: 10 },
+    { texto: 'Tensione as maos e os bracos...', seg: 5 },
+    { texto: 'Solte e relaxe...', seg: 10 },
+    { texto: 'Tensione os ombros e o pescoco...', seg: 5 },
+    { texto: 'Solte e relaxe...', seg: 10 },
+    { texto: 'Tensione o rosto...', seg: 5 },
+    { texto: 'Solte e relaxe o corpo todo...', seg: 10 }
+  ],
+  'Meditacao': [
+    { texto: 'Sente-se confortavelmente e feche os olhos.', seg: 20 },
+    { texto: 'Perceba o ar entrando e saindo pelo nariz.', seg: 20 },
+    { texto: 'Se a mente divagar, volte a atencao para a respiracao, sem julgamento.', seg: 20 },
+    { texto: 'Perceba o peso do corpo, sem tentar mudar nada.', seg: 20 },
+    { texto: 'Continue respirando devagar, no seu ritmo.', seg: 20 }
+  ],
+  'Corpo': [
+    { texto: 'Leve a atencao para os pes...', seg: 40 },
+    { texto: 'Agora para as pernas...', seg: 40 },
+    { texto: 'Agora para o abdomen...', seg: 40 },
+    { texto: 'Agora para o peito...', seg: 40 },
+    { texto: 'Agora para as maos e os bracos...', seg: 40 },
+    { texto: 'Agora para os ombros e o pescoco...', seg: 40 },
+    { texto: 'Agora para o rosto e a cabeca...', seg: 40 },
+    { texto: 'Perceba o corpo inteiro, relaxado...', seg: 40 }
+  ],
+  'Alongamento': [
+    { texto: 'Incline a cabeca suavemente para os lados...', seg: 30 },
+    { texto: 'Gire os ombros para tras devagar...', seg: 30 },
+    { texto: 'Estique os bracos acima da cabeca...', seg: 30 },
+    { texto: 'Gire o tronco suavemente para os dois lados...', seg: 30 },
+    { texto: 'Incline-se para frente soltando os bracos...', seg: 30 }
+  ],
+  'Visualizacao': [
+    { texto: 'Feche os olhos e imagine um lugar tranquilo.', seg: 30 },
+    { texto: 'Repare no que voce ve ao redor: cores, formas, luz.', seg: 30 },
+    { texto: 'Preste atencao aos sons desse lugar.', seg: 30 },
+    { texto: 'Sinta a temperatura e a textura do ambiente.', seg: 30 },
+    { texto: 'Perceba como seu corpo se sente mais leve aqui.', seg: 30 },
+    { texto: 'Fique nesse lugar, respirando devagar.', seg: 30 }
+  ]
+};
+
+var mindlyTimers = {};
+
+function mindlyIniciarExercicio(idx, duracaoMin, animacao, tipo) {
+  var btn = document.getElementById('ex-start-' + idx);
+  var timerEl = document.getElementById('ex-timer-' + idx);
+  var circle = document.getElementById('ex-circle-' + idx);
+  var descEl = document.getElementById('ex-desc-' + idx);
+  var classeAnimacao = animacao === 'brilho' ? 'ex-circle-brilho' : 'ex-circle-pulsando';
+
+  if (mindlyTimers[idx]) {
+    clearInterval(mindlyTimers[idx]);
+    delete mindlyTimers[idx];
+    btn.textContent = 'Iniciar';
+    circle.classList.remove('ex-circle-pulsando', 'ex-circle-brilho');
+    descEl.textContent = descEl.getAttribute('data-desc');
+    return;
+  }
+
+  var roteiro = mindlyRoteiros[tipo] || [{ texto: 'Continue respirando devagar...', seg: 10 }];
+  var faseIdx = 0;
+  var faseRestante = roteiro[0].seg;
+  var segundosRestantes = duracaoMin * 60;
+
+  btn.textContent = 'Pausar';
+  circle.classList.add(classeAnimacao);
+  descEl.textContent = roteiro[0].texto;
+
+  function atualizar() {
+    var min = Math.floor(segundosRestantes / 60);
+    var seg = segundosRestantes % 60;
+    timerEl.textContent = min + ':' + (seg < 10 ? '0' : '') + seg;
+
+    if (segundosRestantes <= 0) {
+      clearInterval(mindlyTimers[idx]);
+      delete mindlyTimers[idx];
+      btn.textContent = 'Concluido';
+      circle.classList.remove('ex-circle-pulsando', 'ex-circle-brilho');
+      descEl.textContent = descEl.getAttribute('data-desc');
+      return;
+    }
+
+    faseRestante--;
+    if (faseRestante <= 0) {
+      faseIdx = (faseIdx + 1) % roteiro.length;
+      faseRestante = roteiro[faseIdx].seg;
+      descEl.textContent = roteiro[faseIdx].texto;
+    }
+
+    segundosRestantes--;
+  }
+
+  atualizar();
+  mindlyTimers[idx] = setInterval(atualizar, 1000);
+}
+</script>
 {% endblock %}

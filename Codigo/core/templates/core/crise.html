@@ -1,6 +1,7 @@
 {% extends 'core/base.html' %}
+{% load static %}
 
-{% block title %}Mindly — Modo Crise{% endblock %}
+{% block title %}Mindly – Modo Crise{% endblock %}
 
 {% block content %}
 <div class="crise-screen">
@@ -17,15 +18,104 @@
 
   <div class="crise-exercise">
     <div class="ex-title">Exercício Guiado</div>
-    <div class="ex-circle">🌬️</div>
-    <div class="ex-desc">Vamos respirar juntos. Inspire pelo nariz, segure e expire devagar.</div>
-    <button class="start-btn">Começar agora</button>
+    <div class="ex-circle" id="criseCirculo">🫁</div>
+    <div class="ex-desc" id="criseInstrucao">Vamos respirar juntos. Inspire pelo nariz, segure e expire devagar.</div>
+    <button type="button" class="start-btn" id="criseBotaoRespirar" onclick="mindlyAlternarRespiracaoCrise()">Começar agora</button>
   </div>
 
   <div class="crise-bottom">
-    <button class="btn-ajuda">📞 Contato de Ajuda</button>
-    <button class="btn-audio">🎵 Áudio de Fundo</button>
+    <a href="tel:188" class="btn-ajuda">📞 Contato de Ajuda (CVV 188)</a>
+    <button type="button" class="btn-audio" id="criseBotaoAudio" onclick="mindlyAlternarAudioCrise()">🎵 Áudio de Fundo</button>
   </div>
 
+  <audio id="criseAudioFundo" loop preload="none" data-src="{% static 'core/audio/fundo-crise.mp3' %}"></audio>
+
 </div>
+
+<script>
+var criseRespirando = false;
+var criseRespiracaoTimer = null;
+var criseFases = ['Inspire pelo nariz...', 'Segure...', 'Expire devagar...'];
+var criseFaseIdx = 0;
+
+function mindlyAlternarRespiracaoCrise() {
+  var botao = document.getElementById('criseBotaoRespirar');
+  var circulo = document.getElementById('criseCirculo');
+  var instrucao = document.getElementById('criseInstrucao');
+
+  if (criseRespirando) {
+    clearInterval(criseRespiracaoTimer);
+    criseRespirando = false;
+    botao.textContent = 'Começar agora';
+    circulo.classList.remove('ex-circle-pulsando');
+    instrucao.textContent = 'Vamos respirar juntos. Inspire pelo nariz, segure e expire devagar.';
+    return;
+  }
+
+  criseRespirando = true;
+  criseFaseIdx = 0;
+  botao.textContent = 'Parar';
+  circulo.classList.add('ex-circle-pulsando');
+  instrucao.textContent = criseFases[0];
+
+  criseRespiracaoTimer = setInterval(function () {
+    criseFaseIdx = (criseFaseIdx + 1) % criseFases.length;
+    instrucao.textContent = criseFases[criseFaseIdx];
+  }, 4000);
+}
+
+var mindlyAudioBlobUrl = null;
+var mindlyAudioCarregando = false;
+
+function mindlyAlternarAudioCrise() {
+  var audio = document.getElementById('criseAudioFundo');
+  var botao = document.getElementById('criseBotaoAudio');
+
+  if (!audio.paused) {
+    audio.pause();
+    botao.textContent = '🎵 Áudio de Fundo';
+    return;
+  }
+
+  if (mindlyAudioCarregando) {
+    return;
+  }
+
+  if (mindlyAudioBlobUrl) {
+    audio.play().then(function () {
+      botao.textContent = '⏸ Pausar Áudio';
+    }).catch(function () {
+      botao.textContent = '🎵 Áudio indisponível';
+    });
+    return;
+  }
+
+  mindlyAudioCarregando = true;
+  botao.textContent = '🎵 Carregando...';
+
+  fetch(audio.dataset.src)
+    .then(function (resp) {
+      if (!resp.ok) { throw new Error('erro ao buscar audio'); }
+      return resp.blob();
+    })
+    .then(function (blob) {
+      mindlyAudioBlobUrl = URL.createObjectURL(blob);
+      audio.src = mindlyAudioBlobUrl;
+      return audio.play();
+    })
+    .then(function () {
+      botao.textContent = '⏸ Pausar Áudio';
+    })
+    .catch(function () {
+      botao.textContent = '🎵 Áudio indisponível';
+    })
+    .finally(function () {
+      mindlyAudioCarregando = false;
+    });
+}
+
+document.getElementById('criseAudioFundo').addEventListener('error', function () {
+  document.getElementById('criseBotaoAudio').textContent = '🎵 Áudio indisponível';
+});
+</script>
 {% endblock %}

@@ -4,7 +4,7 @@ from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
 from datetime import date, timedelta
-from .models import Exercicio, Dica, Noticia, Diario
+from .models import Exercicio, Dica, Noticia, Diario, Crise
 
 
 def login_view(request):
@@ -138,14 +138,42 @@ def diario_excluir(request, id):
     return redirect(f"{reverse('diario')}?data={data_entrada.isoformat()}")
 
 
+EXERCICIO_ICONES = {
+    'Respiracao': '🫁',
+    'Relaxamento': '💪',
+    'Meditacao': '🧘',
+    'Corpo': '🌿',
+    'Alongamento': '🤸',
+    'Visualizacao': '🌄',
+}
+
+EXERCICIO_ANIMACOES = {
+    'Respiracao': 'pulsando',
+    'Relaxamento': 'pulsando',
+    'Alongamento': 'pulsando',
+    'Meditacao': 'brilho',
+    'Corpo': 'brilho',
+    'Visualizacao': 'brilho',
+}
+
+
 def exercicios(request):
-    lista_exercicios = Exercicio.objects.all()
+    lista_exercicios = list(Exercicio.objects.all())
+    for ex in lista_exercicios:
+        ex.icone = EXERCICIO_ICONES.get(ex.tipo, '🫁')
+        ex.animacao = EXERCICIO_ANIMACOES.get(ex.tipo, 'pulsando')
     return render(request, 'core/exercicios.html', {'exercicios': lista_exercicios})
 
 
 def dicas(request):
-    lista_dicas = Dica.objects.all()
-    return render(request, 'core/dicas.html', {'dicas': lista_dicas})
+    categorias = ['Ansiedade', 'Estresse', 'Foco e estudos', 'Sono']
+    categoria_selecionada = request.GET.get('categoria', categorias[0])
+    lista_dicas = Dica.objects.filter(categoria=categoria_selecionada)
+    return render(request, 'core/dicas.html', {
+        'dicas': lista_dicas,
+        'categorias': categorias,
+        'categoria_selecionada': categoria_selecionada,
+    })
 
 
 def noticias(request):
@@ -162,5 +190,7 @@ def noticia_detalhe(request, id):
     return render(request, 'core/noticia_detalhe.html', {'noticia': noticia})
 
 
+@login_required(login_url='login')
 def crise(request):
+    Crise.objects.create(usuario=request.user, observacao='')
     return render(request, 'core/crise.html')

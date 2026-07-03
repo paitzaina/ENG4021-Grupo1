@@ -5,6 +5,7 @@ from datetime import date
 class Dica(models.Model):
     titulo = models.CharField(max_length=100)
     descricao = models.TextField()
+    categoria = models.CharField(max_length=50, default='Geral')
 
     def __str__(self):
         return self.titulo
@@ -14,6 +15,7 @@ class Exercicio(models.Model):
     nome = models.CharField(max_length=100)
     duracao = models.IntegerField()
     instrucoes = models.TextField()
+    tipo = models.CharField(max_length=30, default='Respiracao')
 
     def __str__(self):
         return self.nome

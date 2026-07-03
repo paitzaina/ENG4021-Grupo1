@@ -394,6 +394,35 @@ button {
   opacity: 0.88;
 }
 
+.ex-area-oculto {
+  display: none;
+}
+
+.ex-timer {
+  font-size: 22px;
+  font-weight: 700;
+  color: #1e4d72;
+  letter-spacing: 0.5px;
+}
+
+.ex-circle-pulsando {
+  animation: mindlyPulse 2s ease-in-out infinite;
+}
+
+@keyframes mindlyPulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.12); }
+}
+
+.ex-circle-brilho {
+  animation: mindlyBrilho 3s ease-in-out infinite;
+}
+
+@keyframes mindlyBrilho {
+  0%, 100% { opacity: 1; box-shadow: 0 4px 14px rgba(91, 164, 207, 0.35); }
+  50% { opacity: 0.7; box-shadow: 0 4px 26px rgba(91, 164, 207, 0.6); }
+}
+
 /* ============================================================
    DICAS (dicas.html)
    ============================================================ */
@@ -475,6 +504,31 @@ button {
   font-size: 11px;
   color: #8ab4cc;
   margin-top: 2px;
+  line-height: 1.5;
+}
+
+.dica-card .dica-extra {
+  display: none;
+}
+
+.dica-card.dica-expandida .dica-extra {
+  display: inline;
+}
+
+.dica-chevron {
+  font-size: 12px;
+  color: #8ab4cc;
+  flex-shrink: 0;
+  transition: transform 0.2s ease;
+}
+
+.dica-card.dica-expandida .dica-chevron {
+  transform: rotate(180deg);
+}
+
+.dica-card.dica-expandida {
+  background: #eaf4fb;
+  border-color: #5ba4cf;
 }
 
 /* ============================================================

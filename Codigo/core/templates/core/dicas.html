@@ -4,7 +4,7 @@
 
 {% block content %}
 <div class="topbar">
-  <a href="{% url 'home' %}" class="back"><</a>
+  <a href="{% url 'home' %}" class="back">‹</a>
   <span class="topbar-title">Dicas</span>
 </div>
 
@@ -12,20 +12,20 @@
   <div class="dicas-layout">
 
     <div class="dicas-cats">
-      <button class="cat-btn active">Ansiedade</button>
-      <button class="cat-btn">Estresse</button>
-      <button class="cat-btn">Foco/<br>estudos</button>
-      <button class="cat-btn">Sono</button>
+      {% for categoria in categorias %}
+      <a href="?categoria={{ categoria|urlencode }}" class="cat-btn{% if categoria == categoria_selecionada %} active{% endif %}">{{ categoria }}</a>
+      {% endfor %}
     </div>
 
     <div class="dicas-content">
       {% for dica in dicas %}
-      <div class="dica-card">
+      <div class="dica-card" onclick="mindlyAlternarDica(this)">
         <span class="dica-icon">💡</span>
         <div>
           <div class="dica-label">{{ dica.titulo }}</div>
-          <div class="dica-sub">{{ dica.descricao }}</div>
+          <div class="dica-sub" data-full="{{ dica.descricao }}"></div>
         </div>
+        <span class="dica-chevron">▾</span>
       </div>
       {% empty %}
       <div class="dica-card">
@@ -38,4 +38,30 @@
 
   </div>
 </div>
+
+<script>
+document.querySelectorAll('.dica-sub').forEach(function (el) {
+  var texto = el.getAttribute('data-full') || '';
+  var pontoIdx = texto.indexOf('. ');
+  if (pontoIdx === -1) {
+    el.textContent = texto;
+    return;
+  }
+  var preview = texto.slice(0, pontoIdx + 1);
+  var resto = texto.slice(pontoIdx + 1).trim();
+  el.innerHTML = '';
+  var previewSpan = document.createElement('span');
+  previewSpan.className = 'dica-preview';
+  previewSpan.textContent = preview;
+  var extraSpan = document.createElement('span');
+  extraSpan.className = 'dica-extra';
+  extraSpan.textContent = ' ' + resto;
+  el.appendChild(previewSpan);
+  el.appendChild(extraSpan);
+});
+
+function mindlyAlternarDica(card) {
+  card.classList.toggle('dica-expandida');
+}
+</script>
 {% endblock %}
