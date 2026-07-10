@@ -194,3 +194,7 @@ def noticia_detalhe(request, id):
 def crise(request):
     Crise.objects.create(usuario=request.user, observacao='')
     return render(request, 'core/crise.html')
+
+
+def csrf_failure(request, reason=""):
+    return render(request, 'core/csrf_failure.html', status=403)

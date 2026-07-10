@@ -1,0 +1,21 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MindApp - Sessao expirada</title>
+<link rel="stylesheet" href="{% static 'core/css/style.css' %}?v=4">
+</head>
+<body>
+<div class="auth-shell">
+<div class="auth-card">
+<div class="auth-logo"></div>
+<div class="auth-appname">MindApp</div>
+<div class="auth-title">Sua sessao expirou</div>
+<div class="auth-subtitle">Isso pode acontecer quando a pagina fica aberta por um tempo. Recarregue e tente de novo.</div>
+<a href="javascript:history.back()" class="auth-btn-primary" style="display:block;text-align:center;text-decoration:none;margin-top:16px;">Voltar e tentar novamente</a>
+</div>
+</div>
+</body>
+</html>
